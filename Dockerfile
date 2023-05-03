@@ -6,7 +6,7 @@ ENV LANG C.UTF-8 \
 ENV BUILD_PACKAGES="build-base" \
     DB_PACKAGES="sqlite-dev postgresql-dev" \
     RAILS_PACKAGES="tzdata nodejs imagemagick" \
-    FAVORITE_PACKAGES="less"
+    FAVORITE_PACKAGES="less curl"
 
 RUN apk update && \
     apk upgrade && \
@@ -15,6 +15,10 @@ RUN apk update && \
         ${DB_PACKAGES} \
         ${RAILS_PACKAGES} \
         ${FAVORITE_PACKAGES}
+
+RUN touch ~/.bashrc \
+    && curl -o- -L https://yarnpkg.com/install.sh | ash \
+    && ln -s "$HOME/.yarn/bin/yarn" /usr/local/bin/yarn
 
 WORKDIR /app
 
