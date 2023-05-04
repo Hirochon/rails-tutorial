@@ -82,6 +82,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.2)
     minitest (5.18.0)
     msgpack (1.7.0)
     net-imap (0.3.4)
@@ -94,6 +95,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
+    nokogiri (1.14.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     racc (1.6.2)
@@ -141,6 +145,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.6.2)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (1.6.2-x86_64-linux)
     thor (1.2.1)
     thread_safe (0.3.6)
     timeout (0.3.2)
@@ -157,6 +164,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  ruby
   x86_64-linux-musl
 
 DEPENDENCIES
@@ -164,6 +172,7 @@ DEPENDENCIES
   listen
   rails (= 6.0.4)
   spring
+  sqlite3
   webpacker
 
 BUNDLED WITH
