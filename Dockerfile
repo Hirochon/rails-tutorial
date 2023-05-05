@@ -26,6 +26,8 @@ COPY Gemfile \
     Gemfile.lock \
     /app/
 
+RUN gem install bundler -v 2.2.17
+
 RUN bundle install --jobs=4
 
 # https://github.com/bundler/bundler/issues/6154
